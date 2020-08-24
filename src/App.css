@@ -12,6 +12,7 @@
 .vid {
   width: 100%;
   height: 95%;
+
   /* border: 4px solid white; */
 }
 
@@ -22,16 +23,23 @@
   position: relative;
   width: 100%;
   height: 100%;
+  padding-left: 2%;
   /* border: 8px solid orangered; */
 }
 
-/* .background-video {
-  max-width: fit-content;
-  position: absolute;
-  min-width: 50%;
-  min-height: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: solid 4px solid turquoise;
+/* .gOL {
+  font-family: ENDLESSBUMMER;
+  text-align: center;
+  color: #39ff14;
+  width: 100%;
+  height: 30%;
+  font-size: 36pt;
+  border: 2px solid white;
+  margin-bottom: 8%;
+} */
+
+/* h1 {
+  font-size: 36pt;
+  margin: 0;
+  padding: 0;
 } */

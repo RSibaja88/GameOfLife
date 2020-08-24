@@ -55,7 +55,7 @@ function OneStep(props) {
           }
         }}
       >
-        One Step
+        ONE STEP
       </button>
     </div>
   );

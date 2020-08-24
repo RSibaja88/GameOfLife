@@ -7,12 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="vidContain">
-        <video
-          className="vid"
-          id="background-video"
-          loop="true"
-          autoPlay="true"
-        >
+        <video className="vid" id="background-video" loop autoPlay>
           <source src={neonVid} type="video/mp4" />
         </video>
       </div>

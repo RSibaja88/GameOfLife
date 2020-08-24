@@ -73,7 +73,7 @@ function Grid() {
   const handleSubmitC = (evt) => {
     evt.preventDefault();
     console.log(`Submitting Row ${rowSizeRef.current}`);
-    return rowSizeRef.current;
+    return rowSizeRef.current, rowSize;
   };
   // console.log(
   //   "column size: ",
@@ -133,131 +133,140 @@ function Grid() {
 
   return (
     <section className="gridContain">
-      <div className="buttonCol">
-        <h1 className="count">Rounds: {renderCount}</h1>
-        <div className="buttonRow">
-          <button
-            onClick={() => {
-              setRunning(!running);
-              if (!running) {
-                runningRef.current = true;
-                setSpeed(speed);
-                runSim();
-              }
-            }}
-          >
-            {running ? "Stop" : "Start"}
-          </button>
-
-          <button
-            onClick={() => {
-              renderCount = 0;
-              setGrid(clearGrid());
-            }}
-          >
-            Clear
-          </button>
-          <button
-            onClick={() => {
-              if (!running) {
-                const rows = [];
-                for (let i = 0; i < rowSizeRef.current; i++) {
-                  rows.push(
-                    Array.from(Array(numCols), () =>
-                      Math.random() > density ? 1 : 0
-                    )
-                  );
+      <div className="left">
+        <div className="buttonCol">
+          <h1 className="count">Rounds: {renderCount}</h1>
+          <div className="buttonRow">
+            <button
+              onClick={() => {
+                setRunning(!running);
+                if (!running) {
+                  runningRef.current = true;
+                  setSpeed(speed);
+                  runSim();
                 }
-                setGrid(rows);
-              }
-              console.log(
-                "density from random: ",
-                density,
-                "rowsize: ",
-                rowSize
-              );
-            }}
-          >
-            Random
-          </button>
+              }}
+            >
+              {running ? "STOP" : "START"}
+            </button>
 
-          <button
-            className="invisButton"
-            onClick={() => {
-              renderCount = renderCount + 1;
-            }}
-          >
-            <OneStep
-              numRows={numRows}
-              numCols={numCols}
-              operations={operations}
-              grid={grid}
-              runSim={runSim}
-              setGrid={setGrid}
-              produce={produce}
-            />
-          </button>
-        </div>
-      </div>
-      <div className="masterFormSection">
-        <form className="optionsForm" onSubmit={handleSubmit}>
-          <div className="inputRow">
-            <label>
-              Speed of Game (milliseconds):
-              <input
-                type="number"
-                value={speed}
-                onChange={(e) => setSpeed(e.target.value)}
+            <button
+              onClick={() => {
+                renderCount = 0;
+                setGrid(clearGrid());
+              }}
+            >
+              CLEAR
+            </button>
+            <button
+              onClick={() => {
+                if (!running) {
+                  const rows = [];
+                  for (let i = 0; i < rowSizeRef.current; i++) {
+                    rows.push(
+                      Array.from(Array(numCols), () =>
+                        Math.random() > density ? 1 : 0
+                      )
+                    );
+                  }
+                  setGrid(rows);
+                }
+                console.log(
+                  "density from random: ",
+                  density,
+                  "rowsize: ",
+                  rowSize
+                );
+              }}
+            >
+              RANDOM
+            </button>
+
+            <button
+              className="invisButton"
+              onClick={() => {
+                renderCount = renderCount + 1;
+              }}
+            >
+              <OneStep
+                numRows={numRows}
+                numCols={numCols}
+                operations={operations}
+                grid={grid}
+                runSim={runSim}
+                setGrid={setGrid}
+                produce={produce}
               />
-            </label>
-            <input type="submit" value="Submit" />
+            </button>
           </div>
-        </form>
-        <form className="optionsFormA" onSubmit={handleSubmitA}>
-          <div className="inputRow">
-            <label>
-              Density of Live Cells in Random:{" "}
-              <input
-                type="number"
-                value={density}
-                placeholder="0.1 -0.9 is least dense"
-                onChange={(e) => setDensity(e.target.value)}
-              />
-            </label>
-            <input type="submit" value="Submit" />
+          <div className="masterFormSection">
+            <form onSubmit={handleSubmit}>
+              <div className="inputRow">
+                <label>
+                  Speed of Game (milliseconds):
+                  <input
+                    type="number"
+                    value={speed}
+                    onChange={(e) => setSpeed(e.target.value)}
+                  />
+                </label>
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+            <form onSubmit={handleSubmitA}>
+              <div className="inputRow">
+                <label>
+                  Density of Live Cells in Random:
+                  <p className="tag">RANGE 0.1 - 0.9</p>
+                  <input
+                    type="number"
+                    value={density}
+                    placeholder="0.1 -0.9 is least dense"
+                    onChange={(e) => setDensity(e.target.value)}
+                  />
+                </label>
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+            {/* <div className="inputRowGrid"> */}
+            <div className="optionsFormB">
+              <header className="sizeHead">Size of Grid:</header>
+              <form onSubmit={handleSubmitC}>
+                <div className="inputRow">
+                  <label>
+                    Rows:
+                    <input
+                      type="number"
+                      value={rowSize}
+                      onChange={(e) => setRowSize(e.target.value)}
+                    />
+                  </label>
+                  <input type="submit" value="Submit" />
+                </div>
+              </form>
+              <form onSubmit={handleSubmitB}>
+                <div className="inputRow">
+                  <label>
+                    Columns:
+                    <input
+                      type="number"
+                      value={colSize}
+                      onChange={(e) => setColSize(e.target.value)}
+                    />
+                  </label>
+                  <input type="submit" value="Submit" />
+                </div>
+              </form>
+            </div>
+            {/* </div> */}
           </div>
-        </form>
-        <div className="inputRowGrid">
-          <form className="optionsFormB" onSubmit={handleSubmitC}>
-            <header className="sizeHead">Size of Grid (60 max):</header>
-            <label>
-              Rows:
-              <input
-                type="number"
-                value={rowSizeRef.current}
-                onChange={(e) => setRowSize(e.target.value)}
-              />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
-          <form className="optionsFormB" onSubmit={handleSubmitB}>
-            <label>
-              Columns:
-              <input
-                type="number"
-                value={colSize}
-                onChange={(e) => setColSize(e.target.value)}
-              />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
         </div>
       </div>
       <div
         className="gridCont"
         style={{
           display: "grid",
-          gridTemplateColumns: `repeat(${colSize}, 10px)`,
+          gridTemplateColumns: `repeat(${colSize}, 12px)`,
         }}
       >
         {grid.map((rows, i) =>
@@ -278,11 +287,11 @@ function Grid() {
                 }
               }}
               style={{
-                width: 10,
-                height: 10,
+                width: 13.05,
+                height: 12,
                 backgroundColor: grid[i][k] ? "#39ff14" : "black",
                 border: "solid 0.35px #343434",
-                gridTemplateRows: `repeat(${rowSize}, 10px)`,
+                gridTemplateRows: `repeat(${rowSizeRef.current}, 12px)`,
               }}
 
               // ^^setting color for live or dead cells
