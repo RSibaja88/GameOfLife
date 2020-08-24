@@ -11,7 +11,7 @@ button.invisButton {
   display: flex;
   flex-direction: row;
   position: absolute;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background: rgb(6, 41, 0);
   background: linear-gradient(
@@ -19,13 +19,10 @@ button.invisButton {
     rgba(6, 41, 0, 0.3617822128851541) 1%,
     rgba(138, 138, 138, 0.5494572829131652) 100%
   );
-  /* border: 20px solid rgba(0, 0, 0, 0.055); */
-  height: 60%;
+  width: fit-content;
   color: white;
-  width: 65%;
   -webkit-box-shadow: 0px 8px 18px 6px rgba(0, 0, 0, 0.48);
   box-shadow: 0px 8px 18px 6px rgba(0, 0, 0, 0.48);
-  object-fit: scale-down;
   /* border: 3px solid violet; */
 }
 
@@ -94,6 +91,7 @@ button {
 .gridCont {
   width: fit-content;
   margin: 3%;
+  padding: 3%;
   width: 100%;
 }
 

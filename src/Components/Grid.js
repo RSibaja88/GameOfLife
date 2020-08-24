@@ -68,14 +68,13 @@ function Grid() {
   };
 
   const [rowSize, setRowSize] = useState(numRows);
-
+  const rowSizeRef = useRef(rowSize);
+  rowSizeRef.current = rowSize;
   const handleSubmitC = (evt) => {
     evt.preventDefault();
-
-    console.log(`Submitting row Size ${rowSize}`);
-    return rowSize;
+    console.log(`Submitting Row ${rowSizeRef.current}`);
+    return rowSizeRef.current;
   };
-
   // console.log(
   //   "column size: ",
   //   colSize,
@@ -96,13 +95,18 @@ function Grid() {
     setGrid((g) => {
       return produce(g, (gridCopy) => {
         //game rule logic, double for loop to run every cell, for loops inside produce so i can do any kind of mutation on gridCopy and it will update state setGrid
-        for (let i = 0; i < numRows; i++) {
+        for (let i = 0; i < rowSizeRef.current; i++) {
           for (let k = 0; k < numCols; k++) {
             let neighbors = 0;
             operations.forEach(([x, y]) => {
               const newI = i + x;
               const newK = k + y;
-              if (newI >= 0 && newI < numRows && newK >= 0 && newK < numCols) {
+              if (
+                newI >= 0 &&
+                newI < rowSizeRef.current &&
+                newK >= 0 &&
+                newK < numCols
+              ) {
                 neighbors += g[newI][newK];
               }
             });
@@ -157,7 +161,7 @@ function Grid() {
             onClick={() => {
               if (!running) {
                 const rows = [];
-                for (let i = 0; i < numRows; i++) {
+                for (let i = 0; i < rowSizeRef.current; i++) {
                   rows.push(
                     Array.from(Array(numCols), () =>
                       Math.random() > density ? 1 : 0
@@ -166,7 +170,12 @@ function Grid() {
                 }
                 setGrid(rows);
               }
-              console.log("density from random: ", density);
+              console.log(
+                "density from random: ",
+                density,
+                "rowsize: ",
+                rowSize
+              );
             }}
           >
             Random
@@ -222,10 +231,10 @@ function Grid() {
           <form className="optionsFormB" onSubmit={handleSubmitC}>
             <header className="sizeHead">Size of Grid (60 max):</header>
             <label>
-              Row Size:
+              Rows:
               <input
                 type="number"
-                value={rowSize}
+                value={rowSizeRef.current}
                 onChange={(e) => setRowSize(e.target.value)}
               />
             </label>
@@ -233,7 +242,7 @@ function Grid() {
           </form>
           <form className="optionsFormB" onSubmit={handleSubmitB}>
             <label>
-              Grid Size:
+              Columns:
               <input
                 type="number"
                 value={colSize}
@@ -263,6 +272,8 @@ function Grid() {
                     gridCopy[i][k] = grid[i][k] ? 0 : 1;
                   });
                   setGrid(newGrid);
+                  console.log("grid: ", grid);
+
                   // return renderCount;
                 }
               }}
@@ -271,6 +282,7 @@ function Grid() {
                 height: 10,
                 backgroundColor: grid[i][k] ? "#39ff14" : "black",
                 border: "solid 0.35px #343434",
+                gridTemplateRows: `repeat(${rowSize}, 10px)`,
               }}
 
               // ^^setting color for live or dead cells
