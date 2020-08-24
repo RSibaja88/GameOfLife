@@ -1,0 +1,26 @@
+.oneStepButt {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 22px;
+  padding: 5%;
+  width: 30.5%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 4px;
+  color: #39ff14;
+  background-color: rgba(0, 0, 0, 0.692);
+  border: 2px solid #39ff14;
+  font-family: "VT323", monospace;
+}
+
+.oneS {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  margin-top: 1%;
+  padding: 0;
+  width: 100%;
+  /* border: 3px solid blue; */
+}
