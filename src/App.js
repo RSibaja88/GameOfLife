@@ -1,16 +1,14 @@
 import React from "react";
 import "./App.css";
 import Grid from "./Components/Grid";
-import neonVid from "../src/images/BigNeonPinkHD3.mp4";
+import Nav from "./Components/Nav";
+import Rules from "./Components/Rules";
 
 function App() {
   return (
     <div className="App">
-      <div className="vidContain">
-        <video className="vid" id="background-video" loop autoPlay>
-          <source src={neonVid} type="video/mp4" />
-        </video>
-      </div>
+      <Nav />
+      <Rules />
       <Grid />
     </div>
   );
