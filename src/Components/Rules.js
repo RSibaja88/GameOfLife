@@ -3,10 +3,10 @@ import "./Rules.css";
 
 export default function Rules() {
   return (
-    <section className="relRule">
-      <div className="rules" id="rules">
-        <header className="title">John Conway's Game of Life</header>
-        <h1>The Game</h1>
+    <section className="relRule" id="rules">
+      <div className="rules">
+        <header className="title">John Conway's Game of Life </header>
+        <div className="subtit">The Game</div>
         <p>
           The Game of Life is not your typical computer game. It is a 'cellular
           automaton', and was invented by Cambridge mathematician John Conway.
@@ -16,14 +16,16 @@ export default function Rules() {
           multiply. Depending on the initial conditions, the cells form various
           patterns throughout the course of the game.
         </p>
-        <h1>The Rules</h1>
-        <h2>For a space that is 'populated':</h2>
+        <div className="subtit">The Rules</div>
+        <div className="subsub">For a space that is 'populated':</div>
         <p>
           Each cell with one or no neighbors dies, as if by solitude. Each cell
           with four or more neighbors dies, as if by overpopulation. Each cell
           with two or three neighbors survives.
         </p>
-        <h2>For a space that is 'empty' or 'unpopulated'</h2>
+        <div className="subsub">
+          For a space that is 'empty' or 'unpopulated'
+        </div>
         <p>Each cell with three neighbors becomes populated.</p>
       </div>
     </section>

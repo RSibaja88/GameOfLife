@@ -17,23 +17,16 @@ function Nav() {
   }, []);
 
   return (
-    <section className="relContainer">
-      <div className={`navSheet ${show && "nav_switch"}`}>
-        <Link to="rules" smooth={true} duration={1200}>
-          Rules
-        </Link>
+    <div className="container">
+      <div className="navbar">
         <Link to="game" smooth={true} duration={1200}>
           Game
         </Link>
-        {/* <Link Link to="stacks" smooth={true} duration={1200}>
-          Stack
+        <Link to="rules" smooth={true} duration={1200}>
+          Rules
         </Link>
-        <Link Link to="work" smooth={true} duration={1200}>
-          Work
-        </Link>
-        <a>Contact</a> */}
       </div>
-    </section>
+    </div>
   );
 }
 export default Nav;
