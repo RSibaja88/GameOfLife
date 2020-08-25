@@ -19,10 +19,10 @@ function Nav() {
   return (
     <section className="relContainer">
       <div className={`navSheet ${show && "nav_switch"}`}>
-        <Link Link to="rules" smooth={true} duration={1200}>
+        <Link to="rules" smooth={true} duration={1200}>
           Rules
         </Link>
-        <Link Link to="game" smooth={true} duration={1200}>
+        <Link to="game" smooth={true} duration={1200}>
           Game
         </Link>
         {/* <Link Link to="stacks" smooth={true} duration={1200}>
