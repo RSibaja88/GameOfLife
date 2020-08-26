@@ -8,13 +8,13 @@ let numRows = 50;
 
 const operations = [
   [0, 1],
-  [1, 1],
-  [(1, 0)],
   [0, -1],
   [1, -1],
   [-1, 1],
-  [-1, 0],
+  [1, 1],
+  [1, 0],
   [-1, -1],
+  [-1, 0],
 ];
 
 let renderCount = 0;
@@ -257,7 +257,7 @@ function Grid() {
           className="gridCont"
           style={{
             display: "grid",
-            gridTemplateColumns: `repeat(${colSize}, 10px)`,
+            gridTemplateColumns: `repeat(${colSize}, 12px)`,
           }}
         >
           {grid.map((rows, i) =>
@@ -278,11 +278,11 @@ function Grid() {
                   }
                 }}
                 style={{
-                  width: 12.05,
-                  height: 10,
+                  width: 12,
+                  height: 12,
                   backgroundColor: grid[i][k] ? "#39ff14" : "black",
                   border: "solid 0.35px #343434",
-                  gridTemplateRows: `repeat(${rowSizeRef.current}, 10px)`,
+                  gridTemplateRows: `repeat(${rowSizeRef.current}, 12px)`,
                 }}
 
                 // ^^setting color for live or dead cells
