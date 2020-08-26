@@ -54,10 +54,9 @@ input {
   flex-direction: row;
   margin-top: 2%;
   margin-bottom: 2%;
-  height: 28px;
-  font-size: 18pt;
-
-  color: #d238d5ff;
+  height: 1.2vw;
+  font-size: 1vw;
+  color: rgb(210, 56, 213);
   font-family: "Azonix";
   font-weight: 700;
   background: black;
@@ -67,6 +66,12 @@ input {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .inputButton[type="submit" i] {
@@ -220,7 +225,6 @@ button:hover {
 
 .tag {
   margin-top: 0;
-  margin-bottom: 2%;
   font-family: "Azonix";
   color: white;
   font-size: 0.7vw;

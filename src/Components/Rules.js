@@ -1,10 +1,12 @@
 import React from "react";
 import "./Rules.css";
+import logo from "../images/betterLogo.png";
 
 export default function Rules() {
   return (
-    <section className="relRule" id="rules">
-      <div className="rules">
+    <section className="relRule">
+      <img className="logo" src={logo} alt="Logo" />
+      <div className="rules" id="rules">
         <header className="title">John Conway's Game of Life </header>
         <div className="subtit">The Game</div>
         <p>

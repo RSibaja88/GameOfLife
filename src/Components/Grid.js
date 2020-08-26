@@ -208,7 +208,8 @@ function Grid() {
                 <div className="inputRow">
                   <label>
                     Density of Live Cells in Random
-                    <p className="tag">Range 0.9 - 0.1</p>
+                    <p className="tag">Range 0.9 - 0.1.</p>
+                    <p className="tag">(0.1 being the most dense)</p>
                     <input
                       type="number"
                       value={density}
