@@ -1,3 +1,12 @@
+.gamePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 7%;
+}
+
 button.invisButton {
   background-color: rgba(119, 119, 119, 0.007);
   border: none;
@@ -21,10 +30,10 @@ button.invisButton:hover {
 .gridContain {
   display: flex;
   flex-direction: row;
-  position: absolute;
   justify-content: space-evenly;
-  align-items: flex-start;
-  padding: 0.5%;
+  align-items: center;
+  padding: 2%;
+  margin-top: 7%;
   margin-bottom: 7%;
   background: rgb(6, 41, 0);
   background: linear-gradient(
@@ -36,7 +45,7 @@ button.invisButton:hover {
   color: white;
   -webkit-box-shadow: 0px 8px 18px 6px rgba(0, 0, 0, 0.48);
   box-shadow: 0px 8px 18px 6px rgba(0, 0, 0, 0.48);
-  border: 3px solid violet;
+  /* border: 3px solid violet; */
 }
 
 input {
@@ -60,11 +69,13 @@ input {
   -o-border-radius: 2px;
 }
 
-input[type="submit" i] {
+.inputButton[type="submit" i] {
   appearance: none;
   all: unset;
   background-color: #39ff14;
   width: 10%;
+  transition: all 0.5s;
+  cursor: pointer;
   color: #39ff14;
   margin-top: 5%;
   border-radius: 20px;
@@ -72,6 +83,23 @@ input[type="submit" i] {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  transition: 425ms;
+  -webkit-transition: 425ms;
+  -moz-transition: 425ms;
+  -ms-transition: 425ms;
+  -o-transition: 425ms;
+  margin-right: 13.5px;
+}
+
+.inputButton:hover {
+  background-color: #37ff14d3;
+  color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 4px 21px 5px rgba(0, 0, 0, 0.89);
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
 }
 
 .inputRow {
@@ -80,6 +108,7 @@ input[type="submit" i] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 90%;
   align-items: center;
 }
 
@@ -89,7 +118,9 @@ input[type="submit" i] {
   justify-content: center;
   align-items: flex-start;
   width: auto;
+  padding: 2%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.651);
   /* border: 2px solid blue; */
 }
 
@@ -102,10 +133,6 @@ input[type="submit" i] {
   width: auto;
   height: 100%;
   margin-right: 2%;
-}
-
-.rules {
-  width: 10%;
 }
 
 .count {
@@ -162,9 +189,9 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 5%;
+  margin: 3%;
   /* border: 2px solid green; */
-  padding: 1%;
+  padding: 0%;
   width: auto;
   height: 100%;
 }
@@ -180,10 +207,14 @@ button:hover {
 .masterFormSection {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
   font-family: Roboto;
   font-size: 1.5vh;
   margin-top: 4%;
   margin-bottom: 4%;
+  padding: 7%;
 
   /* border: 2px dashed darkolivegreen; */
   width: 100%;

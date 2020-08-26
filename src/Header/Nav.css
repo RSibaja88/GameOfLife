@@ -1,18 +1,31 @@
 .container {
-  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  position: relative;
   width: 100%;
+  height: auto;
+  z-index: 2;
 }
 
 .navbar {
-  margin-top: 3%;
-  margin-bottom: 0;
-  position: absolute;
-  height: 50px;
-  align-items: center;
-  width: 100%;
+  position: fixed;
+  height: 5px;
   display: flex;
-  background-color: black;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 1%;
+  width: 100%;
+  background: rgb(22, 22, 22);
+
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 a {
@@ -22,14 +35,13 @@ a {
   margin-bottom: 0.45%;
   text-decoration: none;
   color: #39ff14;
-  background-color: black;
   cursor: pointer;
   transition: 425ms;
   -webkit-transition: 425ms;
   -moz-transition: 425ms;
   -ms-transition: 425ms;
   -o-transition: 425ms;
-  margin-right: 13.5px;
+  /* margin-right: 13.5px; */
 }
 
 a:hover {

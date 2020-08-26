@@ -1,44 +1,8 @@
-.main {
+/* .app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  align-items: center;
-  position: relative;
-  /* border: 8px solid darkblue; */
-}
-
-.vid {
-  width: 100%;
-  height: 95%;
-
-  /* border: 4px solid white; */
-}
-
-.vidContain {
-  display: flex;
-  justify-content: baseline;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding-left: 2%;
-
-  /* border: 8px solid orangered; */
-}
-
-/* .gOL {
-  font-family: ENDLESSBUMMER;
-  text-align: center;
-  color: #39ff14;
-  width: 100%;
-  height: 30%;
-  font-size: 36pt;
-  border: 2px solid white;
-  margin-bottom: 8%;
-} */
-
-/* h1 {
-  font-size: 36pt;
+  width: auto;
   margin: 0;
   padding: 0;
+  align-items: center;
 } */

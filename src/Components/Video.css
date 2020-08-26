@@ -1,0 +1,8 @@
+.vid {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: fill;
+  /* border: 4px solid white; */
+  z-index: -1;
+}
