@@ -5,7 +5,7 @@ import "./Video.css";
 export default function Video() {
   return (
     <div className="vidContain">
-      <video className="vid" autoPlay="autoplay" loop="loop">
+      <video className="vid" autoPlay loop>
         <source src={neonVid} type="video/mp4" />
       </video>
     </div>

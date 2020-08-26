@@ -1,4 +1,4 @@
-.relRule {
+.relAbout {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -6,14 +6,13 @@
   align-items: flex-start;
 }
 
-.rules {
+.about {
   background: rgb(255, 255, 255);
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 0.8603816526610644) 20%,
     rgba(166, 166, 166, 0.9472163865546218) 100%
   );
-
   /* border: 3px solid #d238d5ff; */
   border-radius: 6px;
   width: 60%;
@@ -30,7 +29,7 @@
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
 }
-.title {
+.titleA {
   font-family: "AirStrike";
   font-size: 2.75vw;
   /* border: 3px solid blue; */
@@ -41,15 +40,15 @@
   width: 100%;
 }
 
-.subtit {
+.subtitle {
   /*border: 3px solid blueviolet;
-    */
+      */
   color: black;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     270deg,
     rgba(255, 255, 255, 0) 11%,
-    rgba(210, 56, 213, 1) 87%
+    rgba(57, 255, 20, 1) 87%
   );
   width: 75%;
   border-radius: 8px;
@@ -64,17 +63,6 @@
   -o-border-radius: 8px;
 }
 
-.subsub {
-  /* border: 3px solid darkgreen; */
-  color: black;
-  text-align: left;
-  font-family: "Azonix";
-  font-weight: 700;
-  font-size: 1.2vw;
-  margin: 0;
-  margin-left: 2%;
-}
-
 p {
   /* border: 3px solid lawngreen; */
   color: black;
@@ -82,6 +70,4 @@ p {
   font-size: 1vw;
   width: 95%;
   margin: 0;
-  padding-top: 1%;
-  padding-bottom: 2%;
 }

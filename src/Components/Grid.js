@@ -75,16 +75,6 @@ function Grid() {
     console.log(`Submitting Row ${rowSizeRef.current}`);
     return rowSizeRef.current, rowSize;
   };
-  // console.log(
-  //   "column size: ",
-  //   colSize,
-  //   "row size: ",
-  //   colSize,
-  //   "density: ",
-  //   density,
-  //   "speed: ",
-  //   speed
-  // );
 
   //this function is recursive
   const runSim = useCallback(() => {
@@ -204,7 +194,7 @@ function Grid() {
               <form onSubmit={handleSubmit}>
                 <div className="inputRow">
                   <label>
-                    Speed of Game (milliseconds):
+                    Speed of Game (milliseconds)
                     <input
                       type="number"
                       value={speed}
@@ -217,8 +207,8 @@ function Grid() {
               <form onSubmit={handleSubmitA}>
                 <div className="inputRow">
                   <label>
-                    Density of Live Cells in Random:
-                    <p className="tag">RANGE 0.9 - 0.1</p>
+                    Density of Live Cells in Random
+                    <p className="tag">Range 0.9 - 0.1</p>
                     <input
                       type="number"
                       value={density}
@@ -230,11 +220,11 @@ function Grid() {
               </form>
               {/* <div className="inputRowGrid"> */}
               <div className="optionsFormB">
-                <header className="sizeHead">Size of Grid:</header>
+                <header className="sizeHead">Size of Grid</header>
                 <form onSubmit={handleSubmitC}>
                   <div className="inputRow">
                     <label>
-                      Rows:
+                      Rows
                       <input
                         type="number"
                         value={rowSize}
@@ -247,7 +237,7 @@ function Grid() {
                 <form onSubmit={handleSubmitB}>
                   <div className="inputRow">
                     <label>
-                      Columns:
+                      Columns
                       <input
                         type="number"
                         value={colSize}

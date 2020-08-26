@@ -4,7 +4,9 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./Fonts/ENDLESSBUMMER-Regular.otf";
-import neonVid from "./images/neonVid.mp4";
+import "./Fonts/AlienLeagueGradientBold-MPEB.otf";
+import "./Fonts/airstrikehalf.ttf";
+import "./Fonts/Azonix.otf";
 
 ReactDOM.render(
   <Router>

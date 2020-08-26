@@ -4,6 +4,22 @@
     url(./Fonts/ENDLESSBUMMER-Regular.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "AlienLeagueGradient";
+  src: local("AlienLeagueGradient"),
+    url(./Fonts/AlienLeagueGradientBold-MPEB.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "AirStrike";
+  src: local("AirStrike"), url(./Fonts/airstrikehalf.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Azonix";
+  src: local("Azonix"), url(./Fonts/Azonix.otf) format("truetype");
+}
+
 html {
   background-color: black;
   margin: 0;
