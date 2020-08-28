@@ -26,7 +26,7 @@ export default function Blog() {
           the UI and over all design. And while some of my design elements added
           a few hurdles to jump over, I really feel those decsions were
           completely worth it for the end product. Go big or go home, am I
-          right? I created all logo graphic for this application using Inkscape
+          right? I created the logo graphic for this application using Inkscape
           and Gimp.
         </p>
         <p>
