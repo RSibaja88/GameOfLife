@@ -7,11 +7,11 @@ export default function Blog() {
       <div className="blog">
         <header className="titleB">From the Developer</header>
         <p>
-          When I was first begining development on this web application, I
-          weighed which language I wanted to use to tackle Conway's Game of
-          life. Ultimately, I chose React because I'm more comfortable working
-          with it than the other langauges I was considering and because I knew
-          I could knock the UI out of the park with React.
+          When I was first began development on this application, I considered
+          which language I wanted to use to tackle Conway's Game of life.
+          Ultimately, I chose React because I'm more comfortable working with it
+          than the other langauges I was considering and because I knew I could
+          knock the UI out of the park with React.
         </p>
         <p>
           First things first, I got to work on the Grid itself and added the
