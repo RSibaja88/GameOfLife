@@ -219,7 +219,6 @@ function Grid() {
                   <input className="inputButton" type="submit" />
                 </div>
               </form>
-              {/* <div className="inputRowGrid"> */}
               <div className="optionsFormB">
                 <header className="sizeHead">Size of Grid</header>
                 <form onSubmit={handleSubmitC}>
@@ -249,7 +248,6 @@ function Grid() {
                   </div>
                 </form>
               </div>
-              {/* </div> */}
             </div>
           </div>
         </div>
